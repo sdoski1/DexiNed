@@ -208,7 +208,7 @@ def parse_args():
     is_testing =True#  current test -352-SM-NewGT-2AugmenPublish
 
     # Training settings
-    TRAIN_DATA = DATASET_NAMES[0] # BIPED=0, MDBD=6
+    TRAIN_DATA = DATASET_NAMES[9] # BIPED=0, MDBD=6
     train_inf = dataset_info(TRAIN_DATA, is_linux=IS_LINUX)
     train_dir = train_inf['data_dir']
 
@@ -245,7 +245,7 @@ def parse_args():
                         default=train_inf['train_list'],
                         help='Dataset sample indices list.')
     parser.add_argument('--is_testing',type=bool,
-                        default=is_testing,
+                        default=True,
                         help='Script in testing mode.')
     parser.add_argument('--double_img',
                         type=bool,
